@@ -1,0 +1,4 @@
+*
+!pyproject.toml
+!firewalla_abuse_guard/
+!firewalla_abuse_guard/*.py

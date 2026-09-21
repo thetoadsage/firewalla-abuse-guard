@@ -1,0 +1,33 @@
+firewalla:
+  msp_domain: "yourdomain.firewalla.net"
+  token: "..."
+  box_gid: "..."
+  target_list_name: "AutoBlock - AbuseIPDB"
+
+abuseipdb:
+  api_key: "..."
+  max_age_days: 30
+  block_threshold: 90
+
+rules:
+  dry_run: true
+  archive_blocked: true
+  poll_interval_seconds: 300
+  alarm_keywords:
+    - "abnormal upload"
+  lookback_hours: 24
+  ip_cache_hours: 24
+
+allowlist:
+  ips: []
+  cidrs:
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+    - "192.168.0.0/16"
+    - "127.0.0.0/8"
+    - "::1/128"
+    - "fc00::/7"
+    - "fe80::/10"
+
+state:
+  path: "data/state.sqlite3"

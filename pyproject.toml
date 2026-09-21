@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "firewalla-abuse-guard"
+version = "0.1.0"
+description = "Alarm-driven Firewalla target list maintenance using AbuseIPDB"
+requires-python = ">=3.12"
+dependencies = ["requests>=2.32.4,<3", "PyYAML>=6.0.2,<7"]
+
+[project.scripts]
+firewalla-abuse-guard = "firewalla_abuse_guard.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["firewalla_abuse_guard*"]
